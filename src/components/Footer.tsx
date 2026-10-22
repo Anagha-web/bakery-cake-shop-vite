@@ -7,7 +7,14 @@ export function Footer() {
     <footer className="bg-cocoa text-cream">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
-          <p className="font-serif text-2xl font-semibold">Sweet Crumbs Bakery</p>
+          <img
+            src="/brand/sweet-crumbs-logo-horizontal-light.svg"
+            alt="Sweet Crumbs Bakery logo"
+            width={825}
+            height={200}
+            loading="lazy"
+            className="h-14 w-auto max-w-full object-contain sm:h-16"
+          />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/70">
             Handcrafted cakes, pastries and breads, baked fresh every day.
           </p>

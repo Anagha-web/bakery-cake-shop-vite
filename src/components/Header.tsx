@@ -13,16 +13,14 @@ export function Header({ cartCount, onCartClick }: HeaderProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-cocoa/10 bg-cream/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20">
-        <a href="#home" className="flex items-center gap-2" aria-label="Sweet Crumbs Bakery home">
-          <span className="grid h-10 w-10 place-items-center rounded-full bg-blush font-serif text-lg font-bold text-rose-dark">
-            SC
-          </span>
-          <span className="font-serif text-xl font-semibold leading-tight">
-            Sweet Crumbs
-            <span className="block text-xs font-sans font-medium uppercase tracking-[0.2em] text-cocoa-light">
-              Bakery
-            </span>
-          </span>
+        <a href="#home" className="flex min-w-0 shrink items-center" aria-label="Sweet Crumbs Bakery home">
+          <img
+            src="/brand/sweet-crumbs-logo-horizontal.svg"
+            alt="Sweet Crumbs Bakery logo"
+            width={825}
+            height={200}
+            className="h-11 w-auto max-w-full object-contain sm:h-12 md:h-14"
+          />
         </a>
 
         <nav aria-label="Main" className="hidden md:block">

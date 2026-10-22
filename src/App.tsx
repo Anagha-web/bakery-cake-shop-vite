@@ -17,6 +17,13 @@ export default function App() {
   const [cartOpen, setCartOpen] = useState(false)
   const [toast, setToast] = useState<string | null>(null)
 
+  // The browser tries to jump to a #section before React has rendered it, so a
+  // shared link like /#contact would otherwise open at the top of the page.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'instant' })
+  }, [])
+
   useEffect(() => {
     if (!toast) return
     const timer = window.setTimeout(() => setToast(null), 2500)

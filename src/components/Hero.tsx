@@ -7,7 +7,7 @@ interface HeroProps {
 
 export function Hero({ onShopCakes }: HeroProps) {
   return (
-    <section id="home" className="scroll-mt-20">
+    <section id="home" className="scroll-mt-20 overflow-x-clip">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-14 sm:px-6 md:grid-cols-2 md:py-24">
         <div>
           <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-blush px-4 py-1.5 text-sm font-medium text-rose-dark">
@@ -38,7 +38,7 @@ export function Hero({ onShopCakes }: HeroProps) {
         </div>
 
         <div className="relative">
-          <div className="absolute -inset-4 -z-10 rotate-3 rounded-[2.5rem] bg-blush" aria-hidden="true" />
+          <div className="absolute -inset-x-1 -inset-y-4 -z-10 sm:-inset-4 rotate-3 rounded-[2.5rem] bg-blush" aria-hidden="true" />
           <img
             src={img('1586985289688-ca3cf47d3e6e', 1000)}
             alt="Baker piping cream onto a layered chocolate ombré cake"
